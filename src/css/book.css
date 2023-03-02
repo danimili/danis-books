@@ -1,0 +1,130 @@
+.book {
+  background: #e9dcf6;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  box-shadow: 0px 0px 3px #b393d3, 0px 0px 7px #b393d3, 0px 0px 7px #b393d3,
+  0px 0px 20px #b393d3;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+}
+
+
+.book:hover {
+  transform: rotateY(180deg);
+  transition-delay: 10.5s;
+}
+
+.book .front,
+.book .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.book .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  transition: transform 0.1s;
+}
+
+.book .back {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+  transition-delay: 0.1s;
+}
+
+.book .number {
+  position: absolute;
+  font-size: 20px;
+}
+
+.book .back {
+  padding: 20px;
+  text-align: justify;
+}
+
+.book:hover .front {
+  transform: rotateY(-180deg);
+  transition-delay: 0s;
+}
+
+.book:hover .back {
+  transform: rotateY(0deg);
+}
+
+.description {
+  vertical-align: middle;
+  padding: 4%;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.book img {
+  width: 80%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 10px 5px 15px 5px;
+}
+
+.book h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.book h4 {
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.number {
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.65rem;
+  width: 3.35rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: red;
+  color: white;
+}
+
+.buy-btn{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  padding: 10px 16px;
+  text-align: center;
+  margin-left: 30%;
+  transition: color 100ms;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  outline: none;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: #F082AC;
+}
