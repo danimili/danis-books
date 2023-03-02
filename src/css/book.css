@@ -12,6 +12,7 @@
   transition: transform 0.2s;
 }
 
+
 .book:hover {
   transform: rotateY(180deg);
   transition-delay: 10.5s;
