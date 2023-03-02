@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {books} from './books';
+import {Book} from './book';
 
 function App() {
+
+const getBook = (id) =>  {
+const book = books.find((book) => book.id === id)
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h1>My Top 12 Books</h1>
+    <div className="booklist">
+      {books.map((book, index) => { 
+        return (
+          <Book {...book} key={book.id} getBook={getBook} number={index} />
+        )
+      })}
     </div>
+    </>
   );
 }
 
